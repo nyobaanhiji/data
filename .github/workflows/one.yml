@@ -1,16 +1,12 @@
 name: xample
 
 on: workflow_dispatch
-    push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-    workflow_dispatch:
 
 jobs:
-    build:
+  build:
+    
     runs-on: windows-latest
+    timeout-minutes: 9999
 
     steps:
       - uses: actions/checkout@v2
